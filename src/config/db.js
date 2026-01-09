@@ -2,7 +2,8 @@ const mongoose = require("mongoose");
 const { PROD_DB_URI, NODE_ENV, LOCAL_DB_URI } = require("./env");
 
 const connectToDatabase = async () => {
-  const dbURI = NODE_ENV === "production" ? PROD_DB_URI : LOCAL_DB_URI;
+  const dbURI = NODE_ENV === "production" ? LOCAL_DB_URI : LOCAL_DB_URI;
+  // const dbURI = NODE_ENV === "production" ? PROD_DB_URI : LOCAL_DB_URI;
 
   try {
     await mongoose.connect(dbURI);
