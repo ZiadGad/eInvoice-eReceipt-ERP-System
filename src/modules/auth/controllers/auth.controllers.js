@@ -19,6 +19,10 @@ exports.login = asyncHandler(async (req, res) => {
   });
 });
 
+// @desc - Refresh user token
+// @route - POST api/v1.0/auth/refresh-token
+// @Access - Public
+
 exports.refreshToken = asyncHandler(async (req, res) => {
   const { refreshToken } = req.body;
   const newAccessToken = await authServices.refreshAccessToken(refreshToken);

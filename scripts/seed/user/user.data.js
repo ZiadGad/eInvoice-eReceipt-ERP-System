@@ -1,5 +1,5 @@
 exports.user = {
   name: "John Doe",
-  email: "admin@example.com",
+  email: "issuer@example.com",
   password: "password123",
 };
