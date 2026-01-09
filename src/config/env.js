@@ -9,7 +9,7 @@ const ACCESS_TOKEN_SECRET =
   process.env.ACCESS_TOKEN_SECRET || "default_jwt_secret";
 const ACCESS_TOKEN_EXPIRES_IN = process.env.ACCESS_TOKEN_EXPIRES_IN || "15m";
 const REFRESH_TOKEN_SECRET =
-  process.env.REFRESH_TOKEN_SECRET || "eefault_refresh_jwt_secret";
+  process.env.REFRESH_TOKEN_SECRET || "default_refresh_jwt_secret";
 const REFRESH_TOKEN_EXPIRES_IN = process.env.REFRESH_TOKEN_EXPIRES_IN || "3d";
 
 module.exports = {
