@@ -4,9 +4,10 @@ const bcrypt = require("bcryptjs");
 
 const userSchema = new Schema(
   {
-    issuerId: {
+    issuer: {
       type: Schema.Types.ObjectId,
       ref: "Issuer",
+      default: null,
     },
     name: {
       type: String,
