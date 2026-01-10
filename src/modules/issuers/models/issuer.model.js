@@ -85,12 +85,12 @@ const issuerSchema = new Schema({
       type: String,
       required: true,
       trim: true,
-      select: false,
+      // select: false,
     },
     etaAccessToken: {
       type: String,
       trim: true,
-      select: false,
+      // select: false,
     },
     etaAccessTokenExpiresAt: {
       type: Date,
