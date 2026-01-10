@@ -7,9 +7,13 @@ const {
 } = require("../../../config/env");
 
 exports.generateAccessToken = (user) =>
-  jwt.sign({ id: user.id, role: user.role }, ACCESS_TOKEN_SECRET, {
-    expiresIn: ACCESS_TOKEN_EXPIRES_IN,
-  });
+  jwt.sign(
+    { id: user.id, role: user.role, issuer: user.issuer },
+    ACCESS_TOKEN_SECRET,
+    {
+      expiresIn: ACCESS_TOKEN_EXPIRES_IN,
+    }
+  );
 
 exports.generateRefreshToken = (user) =>
   jwt.sign({ id: user.id, role: user.role }, REFRESH_TOKEN_SECRET, {

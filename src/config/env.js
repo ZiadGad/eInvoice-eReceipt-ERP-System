@@ -11,6 +11,10 @@ const ACCESS_TOKEN_EXPIRES_IN = process.env.ACCESS_TOKEN_EXPIRES_IN || "15m";
 const REFRESH_TOKEN_SECRET =
   process.env.REFRESH_TOKEN_SECRET || "default_refresh_jwt_secret";
 const REFRESH_TOKEN_EXPIRES_IN = process.env.REFRESH_TOKEN_EXPIRES_IN || "3d";
+const ETA_BASE_URL =
+  process.env.ETA_BASE_URL || "https://api.preprod.invoicing.eta.gov.eg";
+const CLIENT_ID = process.env.CLIENT_ID;
+const CLIENT_SECRET = process.env.CLIENT_SECRET;
 
 module.exports = {
   PORT,
@@ -21,4 +25,7 @@ module.exports = {
   ACCESS_TOKEN_EXPIRES_IN,
   REFRESH_TOKEN_SECRET,
   REFRESH_TOKEN_EXPIRES_IN,
+  ETA_BASE_URL,
+  CLIENT_ID,
+  CLIENT_SECRET,
 };
